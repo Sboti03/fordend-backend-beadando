@@ -1,14 +1,68 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-</head>
-<body>
-    <p>This is a template</p>    
-    <script src='main.js'></script>
-</body>
+<html lang="hu">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Kép keeret készítő</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <script src='main.js'></script>
+    </head>
+    <body>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="">A kép url-je</label>
+                    </div>    
+                    <div class="col-md-6">
+                        <input type="text" id="pic-url">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="">A kép szélessége (pixelben megadva)</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="pic-width">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="">A kép keretvastagsága</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" id="pic-border">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="">Keret színe</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="color" id="border-color">
+                    </div>
+                    <div class="col-md-6">
+                        <button id="generate">Generálás</button>
+                    </div>
+
+                </div>
+                
+            </div>
+            
+
+        </section>
+
+        <div class="container">
+            <section>
+                <img src="" alt="a kép helye" id="output" class="img" style="border: solid 1px black">
+            </section>
+        </div>
+        
+        
+        <footer>
+            <p>Somogyi Botond 2/14T</p>
+            <button id="dark-mode"> Sötét mód</button>
+        </footer>
+        
+
+
+    </body>
 </html>

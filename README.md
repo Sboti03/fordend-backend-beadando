@@ -1,3 +1,5 @@
+# Somogyi Botond
+
 # Webpack keretalkalmazás
 
 ## Telepítés
