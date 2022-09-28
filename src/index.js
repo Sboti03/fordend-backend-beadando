@@ -3,31 +3,34 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 
 
-let imgOut;
 
 let borderColor;
 let borderWidth;
 
 let darkModeOn;
+let imgWidth;
 
 function generate() {
-    imgOut.src = document.getElementById('pic-url').value
+    document.getElementById('output').src = document.getElementById('pic-url').value
+    document.getElementById('output').style.border = borderColor + " solid " + borderWidth + "px";
 }
 
 function borderColorChange(e) {
     borderColor = e.target.value
     console.log(borderColor)
-    imgOut.style.border = borderColor + " solid " + borderWidth + "px";
+    document.getElementById('output').style.border = borderColor + " solid " + borderWidth + "px";
 }
 
 
 function borderChange(e) {
     borderWidth = e.target.value
-    imgOut.style.border = borderColor + " solid " + borderWidth + "px";
+    document.getElementById('output').style.border = borderColor + " solid " + borderWidth + "px";
+    
 }
 
 function widthChange(e) {
-    imgOut.width = e.target.value + " px"
+    imgWidth = e.target.value 
+    document.getElementById('output').width = imgWidth
 }
 
 function darkMode(e) {
@@ -47,9 +50,9 @@ function init() {
     document.getElementById('border-color').addEventListener('input', borderColorChange)
     document.getElementById('pic-border').addEventListener('input', borderChange)
     document.getElementById('pic-width').addEventListener('input', widthChange)
-    imgOut = document.getElementById('output')
     borderColor = "black"
     borderWidth = 1
+    imgWidth = 1000
     document.getElementById('dark-mode').addEventListener('click', darkMode)
     darkModeOn = false;
     
